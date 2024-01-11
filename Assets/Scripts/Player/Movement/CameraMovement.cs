@@ -8,7 +8,7 @@ public class CameraMovement : MonoBehaviour
     [SerializeField] Camera PlayerCamera;
     [SerializeField] float walkSpeed = 6f;
     [SerializeField] float runSpeed = 12f;
-    [SerializeField] float jumpPower = 7f;
+    [SerializeField] float jumpPower = 3f;
     [SerializeField] float gravity = 10f;
 
     [SerializeField] float lookSpeed = 2f;
