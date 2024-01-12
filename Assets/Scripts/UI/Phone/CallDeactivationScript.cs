@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class PhoneDeactivationScript : MonoBehaviour, IPointerClickHandler
+public class CallDeactivationScript : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private CanvasGroup CallBigPhoneCanvasGroup;
     [SerializeField] private Animator animator;

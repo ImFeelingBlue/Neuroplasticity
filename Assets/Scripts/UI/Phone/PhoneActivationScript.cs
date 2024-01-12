@@ -18,16 +18,12 @@ public class PhoneActivationScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && phoneCount == 0 && dontOpen == false)
         {
             animator.SetBool("isPhone", true);
-            Cursor.lockState = CursorLockMode.Confined;
             phoneCount = 1;
-            Cursor.visible = true;
         }
         else if (Input.GetKeyDown(KeyCode.E) && phoneCount == 1 && dontOpen == false)
         {
             animator.SetBool("isPhone", false);
             phoneCount = 0;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
         }
     }
 }
