@@ -11,6 +11,8 @@ public class CallText : MonoBehaviour
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private TMP_Text displayText;
 
+    public CallMenuSellection callMenuSellection;
+
     // Update is called once per frame
     void Update()
     {
@@ -28,6 +30,12 @@ public class CallText : MonoBehaviour
             // Focus on the InputField
             inputField.Select();
             inputField.ActivateInputField();
+            callMenuSellection.canSwitchCall = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            callMenuSellection.canSwitchCall = true;
+            inputField.text = "";
         }
     }
 
