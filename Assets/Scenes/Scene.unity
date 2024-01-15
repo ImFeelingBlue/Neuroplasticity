@@ -1608,6 +1608,7 @@ MonoBehaviour:
   callClick: {fileID: 1204129603}
   numberText: {fileID: 418509481}
   panelBack: {fileID: 1439643746}
+  canSwitchCall: 1
 --- !u!114 &651414684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1623,6 +1624,7 @@ MonoBehaviour:
   callInputClicker: {fileID: 418509481}
   inputField: {fileID: 44645452}
   displayText: {fileID: 1101937179}
+  callMenuSellection: {fileID: 651414683}
 --- !u!1 &671106191
 GameObject:
   m_ObjectHideFlags: 0
