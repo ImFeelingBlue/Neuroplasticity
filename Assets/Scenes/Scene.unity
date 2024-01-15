@@ -1316,7 +1316,7 @@ GameObject:
   - component: {fileID: 595377378}
   - component: {fileID: 595377377}
   m_Layer: 9
-  m_Name: Text (TMP)
+  m_Name: MessagesText (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2029,7 +2029,7 @@ GameObject:
   - component: {fileID: 872351619}
   - component: {fileID: 872351618}
   m_Layer: 9
-  m_Name: Text (TMP)
+  m_Name: MessagesText (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2293,7 +2293,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 86311042}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -2301,7 +2301,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 1
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -2864,7 +2864,7 @@ GameObject:
   - component: {fileID: 1169041104}
   - component: {fileID: 1169041103}
   m_Layer: 9
-  m_Name: Text (TMP)
+  m_Name: MessagesText (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
