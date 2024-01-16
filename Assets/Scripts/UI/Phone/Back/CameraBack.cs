@@ -28,7 +28,6 @@ public class CameraBack : MonoBehaviour
             phone.SetActive(true);
             mainMenu.SetActive(true);
             animator.SetBool("isPhone", true);
-            Debug.Log("works");
         }
     }
 }

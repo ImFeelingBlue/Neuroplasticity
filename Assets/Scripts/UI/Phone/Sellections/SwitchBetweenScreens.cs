@@ -28,11 +28,11 @@ public class SwitchBetweenScreens : MonoBehaviour
     {
         CheckMenuStatus(callMenu, callCliker);
         CheckMenuStatus(messagesMenu, messagesClicker);
-        CheckMenuStatus(settingsMenu, settingsClicker);
         CheckMenuStatus(mapMenu, mapClicker);
         CheckMenuStatus(galleryMenu, galleryClicker);
 
         CheckBigMenuStatus(cameraMenu, cameraClicker);
+        CheckBigMenuStatus(settingsMenu, settingsClicker);
     }
 
     private void CheckMenuStatus(GameObject menu, GameObject clicker)
@@ -52,6 +52,11 @@ public class SwitchBetweenScreens : MonoBehaviour
             bigPhone.SetActive(true);
             bigMenu.SetActive(true);
             phone.SetActive(false);
+            if (bigMenu == settingsMenu)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true; 
+            }
         }
     }
 }
