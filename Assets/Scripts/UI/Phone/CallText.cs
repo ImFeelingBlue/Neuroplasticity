@@ -18,7 +18,7 @@ public class CallText : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject CallMenu;
 
-    public CallMenuSellection callMenuSellection;
+    public CallSellection callSellection;
 
     private bool isInputFieldFocused = false;
     private string enteredText = "";
@@ -44,13 +44,13 @@ public class CallText : MonoBehaviour
         {
             // Unfocus input field and keep the text
             inputField.DeactivateInputField();
-            callMenuSellection.canSwitchCall = true;
+            callSellection.canSwitchCall = true;
             isInputFieldFocused = false;
         }
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            callMenuSellection.canSwitchCall = true;
+            callSellection.canSwitchCall = true;
             inputField.text = "";
         }
 
@@ -115,7 +115,7 @@ public class CallText : MonoBehaviour
             // Unfocus input field and keep the text
             enteredText = inputField.text;
             inputField.DeactivateInputField();
-            callMenuSellection.canSwitchCall = true;
+            callSellection.canSwitchCall = true;
             isInputFieldFocused = false;
         }
         else
@@ -124,7 +124,7 @@ public class CallText : MonoBehaviour
             inputField.text = "";
             inputField.Select();
             inputField.ActivateInputField();
-            callMenuSellection.canSwitchCall = false;
+            callSellection.canSwitchCall = false;
             isInputFieldFocused = true;
         }
     }

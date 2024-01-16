@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class SwitchBetweenScreens : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
+    [SerializeField] private GameObject phone;
+
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject callMenu;
     [SerializeField] private GameObject callCliker;
     [SerializeField] private GameObject messagesMenu;
     [SerializeField] private GameObject messagesClicker;
-    [SerializeField] private GameObject cameraMenu;
-    [SerializeField] private GameObject cameraClicker;
     [SerializeField] private GameObject settingsMenu;
     [SerializeField] private GameObject settingsClicker;
     [SerializeField] private GameObject mapMenu;
@@ -18,14 +20,19 @@ public class SwitchBetweenScreens : MonoBehaviour
     [SerializeField] private GameObject galleryMenu;
     [SerializeField] private GameObject galleryClicker;
 
+    [SerializeField] private GameObject bigPhone;
+    [SerializeField] private GameObject cameraMenu;
+    [SerializeField] private GameObject cameraClicker;
+
     public void Update()
     {
         CheckMenuStatus(callMenu, callCliker);
         CheckMenuStatus(messagesMenu, messagesClicker);
-        CheckMenuStatus(cameraMenu, cameraClicker);
         CheckMenuStatus(settingsMenu, settingsClicker);
         CheckMenuStatus(mapMenu, mapClicker);
         CheckMenuStatus(galleryMenu, galleryClicker);
+
+        CheckBigMenuStatus(cameraMenu, cameraClicker);
     }
 
     private void CheckMenuStatus(GameObject menu, GameObject clicker)
@@ -34,6 +41,17 @@ public class SwitchBetweenScreens : MonoBehaviour
         {
             mainMenu.SetActive(false);
             menu.SetActive(true);
+        }
+    }
+
+    private void CheckBigMenuStatus(GameObject bigMenu, GameObject bigCliker)
+    {
+        if (bigPhone != null && bigMenu != null && bigCliker != null && bigCliker.activeSelf && (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return)))
+        {
+            animator.SetBool("isPhone", false);
+            bigPhone.SetActive(true);
+            bigMenu.SetActive(true);
+            phone.SetActive(false);
         }
     }
 }

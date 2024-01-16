@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MessagesMenuBack : MonoBehaviour
+public class MessagesBack : MonoBehaviour
 {
     [SerializeField] private GameObject messagesBackClicker;
     [SerializeField] private GameObject mainMenu;

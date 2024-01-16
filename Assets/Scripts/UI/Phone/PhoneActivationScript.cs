@@ -7,6 +7,9 @@ using UnityEngine.EventSystems;
 public class PhoneActivationScript : MonoBehaviour
 {
     [SerializeField] private Animator animator;
+    [SerializeField] private GameObject bigPhone;
+    [SerializeField] private GameObject phone;
+    [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject callMenu;
     [SerializeField] private GameObject messagesMenu;
     [SerializeField] private GameObject cameraMenu;
@@ -19,21 +22,30 @@ public class PhoneActivationScript : MonoBehaviour
 
     public bool dontOpen = false;
 
-    private void Start()
+    private void Awake()
     {
-        if (callMenu != null && messagesMenu != null && cameraMenu != null && settingsMenu != null && mapMenu != null && galleryMenu != null)
+        if (bigPhone != null && phone != null && mainMenu != null && callMenu != null && messagesMenu != null && cameraMenu != null && settingsMenu != null && mapMenu != null && galleryMenu != null)
         {
+            bigPhone.SetActive(false);
             callMenu.SetActive(false);
             messagesMenu.SetActive(false);
             cameraMenu.SetActive(false);
             settingsMenu.SetActive(false);
             mapMenu.SetActive(false);
             galleryMenu.SetActive(false);
+
+            phone.SetActive(true);
+            mainMenu.SetActive(true);
         }
     }
 
     // Update is called once per frame
     void Update()
+    {
+        SetPhoneAnimation();
+    }
+
+    private void SetPhoneAnimation()
     {
         if (Input.GetKeyDown(KeyCode.E) && phoneCount == 0 && dontOpen == false)
         {

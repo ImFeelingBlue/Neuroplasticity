@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CallMenuSellection : MonoBehaviour
+public class CallSellection : MonoBehaviour
 {
-    [SerializeField] private GameObject callClick;
+    [SerializeField] private GameObject callClicker;
     [SerializeField] private GameObject numberText;
     [SerializeField] private GameObject panelBack;
 
@@ -19,7 +19,7 @@ public class CallMenuSellection : MonoBehaviour
     private void Start()
     {
         // Initialize the panelArray
-        panelArray = new GameObject[] { callClick, numberText, panelBack };
+        panelArray = new GameObject[] { callClicker, numberText, panelBack };
 
         // Activate the starting panel (callClick)
         SetPanelActive(0);
