@@ -1621,9 +1621,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ab3af2f87ee0bb4e9010ee9e1e20f73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  callButtonClicker: {fileID: 1204129603}
   callInputClicker: {fileID: 418509481}
   inputField: {fileID: 44645452}
   displayText: {fileID: 1101937179}
+  CallBackClicker: {fileID: 1439643746}
+  mainMenu: {fileID: 177505412}
+  CallMenu: {fileID: 651414679}
   callMenuSellection: {fileID: 651414683}
 --- !u!1 &671106191
 GameObject:
@@ -2469,7 +2473,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1049569560}
   - component: {fileID: 1049569563}
-  - component: {fileID: 1049569564}
   - component: {fileID: 1049569562}
   m_Layer: 5
   m_Name: CallBack
@@ -2536,21 +2539,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1049569559}
   m_CullTransparentMesh: 1
---- !u!114 &1049569564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1049569559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 621d91eeedea7b142b7ad2f366bdaeab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CallBackClicker: {fileID: 1439643746}
-  mainMenu: {fileID: 177505412}
-  CallMenu: {fileID: 651414679}
 --- !u!1 &1101937177
 GameObject:
   m_ObjectHideFlags: 0
