@@ -52,6 +52,7 @@ public class SwitchBetweenScreens : MonoBehaviour
             bigPhone.SetActive(true);
             bigMenu.SetActive(true);
             phone.SetActive(false);
+
             if (bigMenu == settingsMenu)
             {
                 Cursor.lockState = CursorLockMode.None;
