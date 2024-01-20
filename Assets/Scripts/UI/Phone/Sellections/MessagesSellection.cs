@@ -28,12 +28,12 @@ public class MessagesSellection : MonoBehaviour
     private void Update()
     {
         // Check for arrow key input
-        if (Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.Alpha5))
+        if (Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             // Move to the next panel
             currentIndex = (currentIndex + 1) % panelArray.Length;
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad8) || Input.GetKeyDown(KeyCode.Alpha8))
+        else if (Input.GetKeyDown(KeyCode.Keypad8) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             // Move to the previous panel
             currentIndex = (currentIndex - 1 + panelArray.Length) % panelArray.Length;

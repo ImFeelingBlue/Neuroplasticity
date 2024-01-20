@@ -25,12 +25,12 @@ public class CameraSellections : MonoBehaviour
     private void Update()
     {
         // Check for arrow key input
-        if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4))
+        if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             // Move to the next panel
             currentIndex = (currentIndex + 1) % panelArray.Length;
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad6) || Input.GetKeyDown(KeyCode.Alpha6))
+        else if (Input.GetKeyDown(KeyCode.Keypad6) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             // Move to the previous panel
             currentIndex = (currentIndex - 1 + panelArray.Length) % panelArray.Length;

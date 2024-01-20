@@ -34,22 +34,22 @@ public class MainMenuSellection : MonoBehaviour
     private void Update()
     {
         // Check for arrow key input
-        if (Input.GetKeyDown(KeyCode.Keypad6) || Input.GetKeyDown(KeyCode.Alpha6))
+        if (Input.GetKeyDown(KeyCode.Keypad6) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             // Move to the next column
             currentCol = (currentCol + 1) % panelGrid.GetLength(1);
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.Alpha4))
+        else if (Input.GetKeyDown(KeyCode.Keypad4) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             // Move to the previous column
             currentCol = (currentCol - 1 + panelGrid.GetLength(1)) % panelGrid.GetLength(1);
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.Alpha5))
+        else if (Input.GetKeyDown(KeyCode.Keypad5) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             // Move to the next row
             currentRow = (currentRow + 1) % panelGrid.GetLength(0);
         }
-        else if (Input.GetKeyDown(KeyCode.Keypad8) || Input.GetKeyDown(KeyCode.Alpha8))
+        else if (Input.GetKeyDown(KeyCode.Keypad8) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             // Move to the previous row
             currentRow = (currentRow - 1 + panelGrid.GetLength(0)) % panelGrid.GetLength(0);
