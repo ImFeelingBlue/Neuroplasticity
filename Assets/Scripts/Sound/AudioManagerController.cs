@@ -13,7 +13,6 @@ public class AudioManagerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             spaceCountSound++;
-            Debug.Log(spaceCountSound);
         }
         if (spaceCountSound == 28)
         {
