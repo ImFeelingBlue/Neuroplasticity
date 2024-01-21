@@ -7,8 +7,6 @@ using TMPro;
 public class CutScene1 : MonoBehaviour
 {
     [SerializeField] private GameObject[] allGameObjects;
-    private int[] stopTheScenes = new int[] { 1, 10, 3, 7, 0, 0, 0, 0, 0, 0 };
-    private int spaceCount = 0;
 
     private int currentIndex = 1; // Start enabling from the second object
 
