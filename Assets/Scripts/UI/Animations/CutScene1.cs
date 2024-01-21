@@ -7,6 +7,7 @@ using TMPro;
 public class CutScene1 : MonoBehaviour
 {
     [SerializeField] private GameObject[] allGameObjects;
+    private int[] spaceCount = new int[] { 5, 10, 3, 7, 0, 0, 0, 0, 0, 0 };
 
     private int currentIndex = 1; // Start enabling from the second object
 
