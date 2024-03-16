@@ -15,15 +15,8 @@ public class ItemSO : ScriptableObject
         if (attributesChange == AttributesChange.Detection)
         {
             RandomMovements randomMovementsScript = GameObject.Find("PlayerUI").GetComponent<RandomMovements>();
-            if (randomMovementsScript.DetectionSkill <= 5 && randomMovementsScript.DetectionSkill > 0 )
-            {
-                randomMovementsScript.ChangeDetextionSkill(itemName, amountToChangeAttribute);
-                return true;
-            }
-            else if (randomMovementsScript.DetectionSkill > 5 && randomMovementsScript.DetectionSkill < 0)
-            {
-                return false;
-            }
+            bool usable = randomMovementsScript.ChangeDetextionSkill(itemName, amountToChangeAttribute);
+            return usable;
         }
         return false;
     }

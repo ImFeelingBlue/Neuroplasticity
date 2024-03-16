@@ -199,22 +199,25 @@ public class RandomMovements : MonoBehaviour
         lidsAreClosed = false;
     }
 
-    public void ChangeDetextionSkill(string itemName, int DetectionSkillChanged)
+    public bool ChangeDetextionSkill(string itemName, int DetectionSkillChanged)
     {
         int CurrentDetectionSkill = DetectionSkill;
-        if (itemName == "Box")
+        if (itemName == "Box" && DetectionSkill <= 5 && DetectionSkill > 0)
         {
             DetectionSkill = CurrentDetectionSkill - DetectionSkillChanged;
             detectionChance = 10 - 2 * DetectionSkill;
             skillPointGiven = true;
             DetectionSkillText.text = "Detection: " + DetectionSkill.ToString();
+            return true;
         }
-        else if (itemName == "Camera")
+        else if (itemName == "Camera" && DetectionSkill < 5 && DetectionSkill >= 0)
         {
             DetectionSkill = CurrentDetectionSkill + DetectionSkillChanged;
             detectionChance = 10 - 2 * DetectionSkill;
             skillPointGiven = true;
             DetectionSkillText.text = "Detection: " + DetectionSkill.ToString();
+            return true;
         }
+        return false;
     }
 }

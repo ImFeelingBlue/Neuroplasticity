@@ -100,7 +100,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Box
   quantity: 3
-  itemDescription: This is a box, gives 5 detection when consumed
+  itemDescription: 'This is a box, you can step on it i guess.
+
+
+    Effect on consumption:
+
+    Detection
+    -1'
 --- !u!65 &6715741063331570363
 BoxCollider:
   m_ObjectHideFlags: 0

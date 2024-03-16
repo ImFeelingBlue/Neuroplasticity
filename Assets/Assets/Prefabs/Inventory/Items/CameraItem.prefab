@@ -121,7 +121,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: Camera
   quantity: 2
-  itemDescription: This is a camera, it takes pictures.
+  itemDescription: 'This is a camera, it takes pictures.
+
+
+    Effect on consumption:
+
+    Detection
+    +1'
 --- !u!54 &5994973805675456493
 Rigidbody:
   m_ObjectHideFlags: 0
