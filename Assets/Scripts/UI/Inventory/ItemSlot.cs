@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using Unity.VisualScripting;
+using System;
 
 public class ItemSlot : MonoBehaviour, IPointerClickHandler
 {
@@ -115,46 +116,68 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     // Handler for left mouse button click
     public void OnLeftClick()
     {
-        if (thisItemSelected) 
+        if (thisItemSelected)
         {
-            inventoryManagerScript.UseItem(itemName);
+            bool usable = inventoryManagerScript.UseItem(itemName);
+            if (usable)
+            {
+                this.quantity -= 1;
+                isFull = false;
+                quantityText.text = this.quantity.ToString();
+                if (this.quantity <= 0)
+                {
+                    EmptySlot();
+                }
+            }
         }
-
-        // Set the mouse left click flag to true
-        mouseLeftClick = true;
-
-        // Deselect all other slots in the inventory
-        inventoryManagerScript.DeselectAllSlots();
-
-        // Activate the selected shader to highlight the current slot
-        selectedShader.SetActive(true);
-        thisItemSelected = true;
-
-        // Display the item name and description in the description panel
-        ItemDescriptionNameText.text = itemName;
-        ItemDescriptionText.text = itemDescription;
-
-        // Set the item description image color based on the item type
-        if (itemName == "Box")
+        else
         {
-            itemDescriptionImage.color = boxColor;
-            itemDescriptionImage.enabled = true;
+            // Set the mouse left click flag to true
+            mouseLeftClick = true;
+
+            // Deselect all other slots in the inventory
+            inventoryManagerScript.DeselectAllSlots();
+
+            // Activate the selected shader to highlight the current slot
+            selectedShader.SetActive(true);
+            thisItemSelected = true;
+
+            // Display the item name and description in the description panel
+            ItemDescriptionNameText.text = itemName;
+            ItemDescriptionText.text = itemDescription;
+
+            // Set the item description image color based on the item type
+            if (itemName == "Box")
+            {
+                itemDescriptionImage.color = boxColor;
+                itemDescriptionImage.enabled = true;
+            }
+            else if (itemName == "Camera")
+            {
+                itemDescriptionImage.color = cameraColor;
+                itemDescriptionImage.enabled = true;
+            }
+            else if (itemName == "")
+            {
+                itemDescriptionImage.color = emptySlotColor;
+                itemDescriptionImage.enabled = true;
+            }
         }
-        else if (itemName == "Camera")
-        {
-            itemDescriptionImage.color = cameraColor;
-            itemDescriptionImage.enabled = true;
-        }
-        else if (itemName == "")
-        {
-            itemDescriptionImage.color = emptySlotColor;
-            itemDescriptionImage.enabled = true;
-        }
+        
     }
 
-    // Handler for right mouse button click (not implemented in this code)
+    private void EmptySlot()
+    {
+        quantityText.enabled = false;
+        itemImage.enabled = false;
+        itemName = "";
+        itemDescriptionImage.color = emptySlotColor;
+        ItemDescriptionNameText.text = "";
+        ItemDescriptionText.text = "";
+    }
+
     public void OnRightClick()
     {
-        // This method can be used to handle right-click actions, such as using or dropping items
+        
     }
 }

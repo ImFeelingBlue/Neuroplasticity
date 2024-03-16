@@ -9,13 +9,23 @@ public class ItemSO : ScriptableObject
     public AttributesChange attributesChange = new AttributesChange();
     public int amountToChangeAttribute;
 
-    public void UseItem()
+    public bool UseItem()
     {
         // AttributesChange
         if (attributesChange == AttributesChange.Detection)
         {
-            GameObject.Find("PlayerUI").GetComponent<RandomMovements>().ChangeDetextionSkill(amountToChangeAttribute);
+            RandomMovements randomMovementsScript = GameObject.Find("PlayerUI").GetComponent<RandomMovements>();
+            if (randomMovementsScript.DetectionSkill <= 5 && randomMovementsScript.DetectionSkill > 0 )
+            {
+                randomMovementsScript.ChangeDetextionSkill(itemName, amountToChangeAttribute);
+                return true;
+            }
+            else if (randomMovementsScript.DetectionSkill > 5 && randomMovementsScript.DetectionSkill < 0)
+            {
+                return false;
+            }
         }
+        return false;
     }
 
     public enum AttributesChange
