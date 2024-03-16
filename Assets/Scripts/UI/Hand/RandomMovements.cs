@@ -19,7 +19,7 @@ public class RandomMovements : MonoBehaviour
     [SerializeField] Transform Player;
     [SerializeField] GameObject PurpleEyeBall;
     [SerializeField] GameObject RedEyeBall;
-    [SerializeField] TMP_Text DetectionSkillText; 
+    [SerializeField] TMP_Text DetectionSkillText;
 
     private bool eyeColorChange = false;
     private bool enemyEncounterTracker = false;
@@ -130,7 +130,7 @@ public class RandomMovements : MonoBehaviour
         float elapsedTime = 0f;
         float duration = 0.3f;
 
-        yield return new WaitForSeconds(0.5f); // Delay before moving back
+        yield return new WaitForSeconds(0.5f);
 
         Vector3 originalPosition = redEyeBallPanel.position; // Store original position
 
@@ -197,5 +197,11 @@ public class RandomMovements : MonoBehaviour
         topLipPanelTransform.position = topLipOpen;
 
         lidsAreClosed = false;
+    }
+
+    public void ChangeDetextionSkill(int DetectionSkillChanged)
+    {
+        DetectionSkill = DetectionSkillChanged;
+        DetectionSkillText.text = "Detection: " + DetectionSkill.ToString();
     }
 }

@@ -115,6 +115,11 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     // Handler for left mouse button click
     public void OnLeftClick()
     {
+        if (thisItemSelected) 
+        {
+            inventoryManagerScript.UseItem(itemName);
+        }
+
         // Set the mouse left click flag to true
         mouseLeftClick = true;
 

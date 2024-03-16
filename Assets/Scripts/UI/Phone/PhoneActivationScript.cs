@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TMPro;
 
 public class PhoneActivationScript : MonoBehaviour
 {
@@ -17,6 +18,10 @@ public class PhoneActivationScript : MonoBehaviour
     [SerializeField] private GameObject mapMenu;
     [SerializeField] private GameObject galleryMenu;
 
+    [SerializeField] private GameObject PhoneButtonsInformationPanel;
+    [SerializeField] private TMP_Text PhoneButtonInformationPanelCounterText;
+    private int phoneButtonInformationCounter = 10;
+    private Coroutine panelCounterCoroutine;
 
     private int phoneCount = 0;
 
@@ -39,6 +44,30 @@ public class PhoneActivationScript : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        if (PhoneButtonsInformationPanel != null)
+        {
+            PhoneButtonsInformationPanel.SetActive(true);
+        }
+    }
+
+    IEnumerator InformationPanelCounter()
+    {
+        while (phoneButtonInformationCounter > 0 && !dontOpen)
+        {
+            yield return new WaitForSeconds(1f);
+            phoneButtonInformationCounter--;
+            PhoneButtonInformationPanelCounterText.text = "Countdown: " + phoneButtonInformationCounter;
+        }
+
+        if (phoneButtonInformationCounter <= 0)
+        {
+            PhoneButtonsInformationPanel.SetActive(false);
+            phoneCount = 1;
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -47,15 +76,30 @@ public class PhoneActivationScript : MonoBehaviour
 
     private void SetPhoneAnimation()
     {
-        if (Input.GetKeyDown(KeyCode.E) && phoneCount == 0 && dontOpen == false)
+        if (Input.GetKeyDown(KeyCode.E) && phoneCount == 0 && !dontOpen)
         {
             animator.SetBool("isPhone", true);
             phoneCount = 1;
+            if (panelCounterCoroutine != null)
+            {
+                StopCoroutine(panelCounterCoroutine);
+            }
+            panelCounterCoroutine = StartCoroutine(InformationPanelCounter());
         }
-        else if (Input.GetKeyDown(KeyCode.E) && phoneCount == 1 && dontOpen == false)
+        else if (Input.GetKeyDown(KeyCode.E) && phoneCount == 1 && !dontOpen)
         {
             animator.SetBool("isPhone", false);
+            phoneButtonInformationCounter = 10;
             phoneCount = 0;
+            StartCoroutine(InformationPanelVisibility());
         }
+    }
+
+    IEnumerator InformationPanelVisibility()
+    {
+        yield return new WaitForSeconds(0.2f);
+        PhoneButtonInformationPanelCounterText.text = "Countdown: 10";
+        phoneButtonInformationCounter = 10;
+        PhoneButtonsInformationPanel.SetActive(true);
     }
 }

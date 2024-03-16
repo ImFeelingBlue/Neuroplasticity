@@ -14,6 +14,7 @@ public class InventoryManager : MonoBehaviour
 
     // Array to store item slots
     public ItemSlot[] itemSlot;
+    public ItemSO[] itemSOs;
 
     // Reference to the ItemSlot script
     [SerializeField] private ItemSlot ItemSlotScript;
@@ -71,6 +72,17 @@ public class InventoryManager : MonoBehaviour
         {
             DescriptionMenu.SetActive(false);
             ItemSlot.mouseLeftClick = false;
+        }
+    }
+
+    public void UseItem(string itemName)
+    {
+        for (int i = 0; i < itemSOs.Length; i++)
+        {
+            if (itemSOs[i].itemName == itemName)
+            {
+                itemSOs[i].UseItem();
+            }
         }
     }
 
