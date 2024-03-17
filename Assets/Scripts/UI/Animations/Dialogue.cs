@@ -13,9 +13,10 @@ public class Dialogue : MonoBehaviour
     [SerializeField] private string[] sentences;
 
     private int spaceCount = 0;
-    private int[] stopTheScenes = new int[17] { 2, 3, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21};
+    [SerializeField] int[] playTheDialogue = new int[0] {};
 
     private int currentIndex = 0;
+    bool contains = false;
 
     // Start is called before the first frame update
     void Start()
@@ -31,17 +32,13 @@ public class Dialogue : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             spaceCount++;
+            contains = playTheDialogue.Contains(spaceCount);
         }
 
         // Check if the space bar is pressed
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && contains)
         {
-            dialogueBox.SetActive(true);
-
-            if (!stopTheScenes.Contains(spaceCount))
-            {
-                NextSentence();
-            }
+            NextSentence();
         }
     }
 
@@ -54,6 +51,10 @@ public class Dialogue : MonoBehaviour
         if (currentIndex < sentences.Length)
         {
             UpdateDialogueText();
+            if (dialogueBox != null && !dialogueBox.activeSelf)
+            {
+                dialogueBox.SetActive(true);
+            }
         }
         else
         {

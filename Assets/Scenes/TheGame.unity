@@ -9965,6 +9965,7 @@ MonoBehaviour:
   itemSOs:
   - {fileID: 11400000, guid: 72054bd7b02b82d48896d88bd5e938af, type: 2}
   - {fileID: 11400000, guid: 841de4fdae5e1034da679b8cc0de9edb, type: 2}
+  - {fileID: 11400000, guid: 11819739c2129bb45859cd29b5660d32, type: 2}
   ItemSlotScript: {fileID: 1543088585}
 --- !u!114 &919711112
 MonoBehaviour:

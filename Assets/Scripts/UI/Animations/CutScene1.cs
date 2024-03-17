@@ -3,32 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Linq;
+using Unity.VisualScripting;
 
 public class CutScene1 : MonoBehaviour
 {
     [SerializeField] private GameObject[] allGameObjects;
+    [SerializeField] int[] playTheScenes = new int[0] { };
 
-    private int currentIndex = 1; // Start enabling from the second object
+    int spaceCount = 0;
+    bool contains = false;
+
+    private int currentIndex = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        DisableAllExceptFirst();
+        DisableAllGameObjects();
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Check if the space bar is pressed
         if (Input.GetKeyDown(KeyCode.Space))
+        {
+            spaceCount++;
+            contains = playTheScenes.Contains(spaceCount);
+        }
+        // Check if the space bar is pressed
+        if (Input.GetKeyDown(KeyCode.Space) && contains)
         {
             EnableNextObject();
         }
     }
 
-    private void DisableAllExceptFirst()
+    private void DisableAllGameObjects()
     {
-        for (int i = 1; i < allGameObjects.Length; i++)
+        for (int i = 0; i < allGameObjects.Length; i++)
         {
             if (allGameObjects[i] != null)
             {

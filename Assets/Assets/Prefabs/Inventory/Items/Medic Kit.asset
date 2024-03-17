@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Medic Kit
   m_EditorClassIdentifier: 
   itemName: Medic Kit
-  attributesChange: 0
-  amountToChangeAttribute: 0
+  attributesChange: 1
+  amountToChangeAttribute: 5
