@@ -8,7 +8,7 @@ using Unity.VisualScripting;
 
 public class CutScene1 : MonoBehaviour
 {
-    [SerializeField] private GameObject[] allGameObjects;
+    [SerializeField] private GameObject[] allScenes;
     [SerializeField] int[] playTheScenes = new int[0] { };
 
     int spaceCount = 0;
@@ -19,6 +19,8 @@ public class CutScene1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         DisableAllGameObjects();
     }
 
@@ -39,11 +41,11 @@ public class CutScene1 : MonoBehaviour
 
     private void DisableAllGameObjects()
     {
-        for (int i = 0; i < allGameObjects.Length; i++)
+        for (int i = 0; i < allScenes.Length; i++)
         {
-            if (allGameObjects[i] != null)
+            if (allScenes[i] != null)
             {
-                allGameObjects[i].SetActive(false);
+                allScenes[i].SetActive(false);
             }
             else
             {
@@ -54,11 +56,11 @@ public class CutScene1 : MonoBehaviour
 
     private void EnableNextObject()
     {
-        if (currentIndex < allGameObjects.Length)
+        if (currentIndex < allScenes.Length)
         {
-            if (allGameObjects[currentIndex] != null)
+            if (allScenes[currentIndex] != null)
             {
-                allGameObjects[currentIndex].SetActive(true);
+                allScenes[currentIndex].SetActive(true);
                 currentIndex++;
             }
             else

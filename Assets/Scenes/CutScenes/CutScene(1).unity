@@ -1002,6 +1002,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434250239}
   m_CullTransparentMesh: 1
+--- !u!1 &515106700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 515106701}
+  - component: {fileID: 515106703}
+  - component: {fileID: 515106702}
+  m_Layer: 5
+  m_Name: empty scene
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &515106701
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515106700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1163896712}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &515106702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515106700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5d4ea2a31bc9e1e47aecf0acbab2747b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &515106703
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515106700}
+  m_CullTransparentMesh: 1
 --- !u!1 &531465196
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,7 +1953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.3254902}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2171,6 +2246,7 @@ RectTransform:
   m_Children:
   - {fileID: 1323361462}
   - {fileID: 1420579817}
+  - {fileID: 515106701}
   - {fileID: 1922338624}
   - {fileID: 332326149}
   - {fileID: 1957012051}
@@ -2473,7 +2549,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1405777613
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2642,8 +2718,9 @@ MonoBehaviour:
   - As he reaches his home, the weight of his ominous reputation denies him solace.
   - Isolation... my only companion.
   - Gabriel approaches his house, casting a final glance at his disabled leg before
-    pushing open the creaking door. The once vibrant home, now shrouded in loneliness
-    and cold neglect, bears the weight of memories long faded.
+    pushing open the creaking door.
+  - The once vibrant home, now shrouded in loneliness and cold neglect, bears the
+    weight of memories long faded.
   - Home... if it ever was.
   - He sinks into the solitude of the sofa, the echoes of his own thoughts reverberating
     within the walls.
@@ -2683,8 +2760,8 @@ MonoBehaviour:
   - Cease, my beautiful and forsaken child. You, who have endured the wickedness
     of the world. It is too soon to surrender. Allow me to extend my aid.
   - In a sudden influx of unfamiliar yet strangely familiar voices, Gabriel feels
-    a disorienting shift in his surroundings. The room transforms, the eyes filling
-    the space, rendering the house unrecognizable.
+    a disorienting shift in his surroundings.
+  - The room transforms, the eyes filling the space, rendering the house unrecognizable.
   - A commanding voice cuts through the surreal atmosphere, urging Gabriel to halt.
     It is a gentle and calm presence that seems to echo through the newfound realm.
   - Cease, my beautiful and forsaken child. You, who have endured the wickedness
@@ -2694,9 +2771,9 @@ MonoBehaviour:
   - Laughter, gentle and resonant, echoes in response.
   - I am -------, the divine god destined to obliterate this world and create a splendid
     new one. I'll liberate you from earthly torment, elevating you to a transcendent
-    plane. With your cooperation, we'll cleanse this world and forge an unparalleled
-    utopia. Despite my strength, formidable forces impede my presence. I need your
-    assistance.
+    plane.
+  - With your cooperation, we'll cleanse this world and forge an unparalleled utopia.
+    Despite my strength, formidable forces impede my presence. I need your assistance.
   - The voice casts an enigmatic invitation into the profound uncertainty of Gabriel's
     existence.
   - Yes.
@@ -2708,19 +2785,21 @@ MonoBehaviour:
     perfection.
   - The closed eye on Gabriel's palm seems to hold a mysterious power, an emblem
     of the god's gaze or perhaps a conduit for their shared purpose.
-  - 'With this singular eye, an eternal bond shall tether us, an unbroken connection
-    that transcends time itself. Yet, heed this decree: the gateway to unveiling
-    its omniscient gaze demands the fulfillment of tasks, a sacred pilgrimage guided
-    by commands to unlock the secrets concealed within.'
+  - With this singular eye, an eternal bond shall tether us, an unbroken connection
+    that transcends time itself.
+  - 'Yet, heed this decree: the gateway to unveiling its omniscient gaze demands
+    the fulfillment of tasks, a sacred pilgrimage guided by commands to unlock the
+    secrets concealed within.'
   - the gateway to unveiling its omniscient gaze demands the ful
   - "\u201CYou shall have no other gods before Me. To be cleansed from other gods,
     get a part of me in you by making a blood oath. Make the blood of mindless part
     of you.\u201D"
   - Through the sacred tether of our blood bond, my eyes shall unveil their true
-    sight, empowering me to assist you more profoundly. Ready yourself, my champion.
-    Extract the lifeblood from the heart of the city. Thereafter, we can embark on
+    sight, empowering me to assist you more profoundly.
+  - Ready yourself, my champion.
+  - Extract the lifeblood from the heart of the city. Thereafter, we can embark on
     the essential steps to forge the foundation of the New World.
-  playTheDialogue: 00000000020000000300000006000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000007000000070000000700000038000000
+  playTheDialogue: 0000000001000000020000000400000006000000130000001400000015000000160000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f000000200000002100000022000000230000002400000025000000260000002700000028000000290000002a0000002b0000002c0000002d0000002e0000002f000000300000003100000032000000330000003400000035000000360000003700000038000000390000003a0000003b0000003c0000003d0000003e0000003f000000400000004100000042000000430000004400000045000000460000004700000048000000490000004a0000004b0000004c0000004d0000004e0000004f00000050000000510000005200000053000000
 --- !u!114 &1420579820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2733,7 +2812,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fd320d9660278a46970ff86fdcab085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allGameObjects:
+  allScenes:
+  - {fileID: 1922338623}
   - {fileID: 1953776094}
   - {fileID: 1050399354}
   - {fileID: 533854915}
@@ -2762,7 +2842,7 @@ MonoBehaviour:
   - {fileID: 80611911}
   - {fileID: 1096846227}
   - {fileID: 825201514}
-  playTheScenes: 03000000040000000500000005000000050000000500000005000000050000000500000005000000050000000500000005000000050000000500000005000000050000000500000005000000050000000500000005000000050000000500000005000000050000000500000005000000
+  playTheScenes: 02000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001500000018000000190000001f0000002400000030000000390000003d00000043000000460000004e000000
 --- !u!222 &1420579821
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2863,7 +2943,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1538214036
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3187,7 +3267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1922338624
 RectTransform:
   m_ObjectHideFlags: 0
