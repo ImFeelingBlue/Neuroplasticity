@@ -12,6 +12,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     // Define colors for different types of items
     Color boxColor = new Color(84f / 255f, 0f / 255f, 18f / 255f, 1f);
     Color cameraColor = new Color(0f, 112f / 255f, 192f / 255f, 1f);
+    Color sewingKitColor = new Color(195f / 255f, 195f / 255f, 0f / 255f, 1f);
     Color emptySlotColor = new Color(101f / 255f, 101f / 255f, 101f / 255f, 1f);
 
     // Static variable to track if a mouse left click occurred
@@ -91,6 +92,11 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
             itemImage.color = cameraColor;
             itemImage.enabled = true;
         }
+        else if (itemName == "Sewing Kit")
+        {
+            itemImage.color = sewingKitColor;
+            itemImage.enabled = true;
+        }
 
         // Return zero to indicate that all items were added successfully
         return 0;
@@ -155,6 +161,11 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
             else if (itemName == "Camera")
             {
                 itemDescriptionImage.color = cameraColor;
+                itemDescriptionImage.enabled = true;
+            }
+            else if (itemName == "Sewing Kit")
+            {
+                itemDescriptionImage.color = sewingKitColor;
                 itemDescriptionImage.enabled = true;
             }
             else if (itemName == "")

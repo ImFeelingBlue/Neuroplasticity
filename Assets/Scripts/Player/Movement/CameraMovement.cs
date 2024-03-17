@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour
     float rotationX = 0;
 
     [SerializeField] bool canMove = true;
-    public bool isPaused = false; // New variable to track pause state
+    public bool isPaused = false;
 
     CharacterController characterController;
 
@@ -73,5 +73,12 @@ public class CameraMovement : MonoBehaviour
     public void SetPaused(bool paused) // Method to set the pause state
     {
         isPaused = paused;
+    }
+
+    // Method to check if the player is walking
+    public bool IsWalking()
+    {
+        // Check if the player is moving forward or sideways
+        return Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0;
     }
 }

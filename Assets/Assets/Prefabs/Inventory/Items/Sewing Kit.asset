@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06fb04288baa3324c9cf53e2a1faed6e, type: 3}
-  m_Name: Medic Kit
+  m_Name: Sewing Kit
   m_EditorClassIdentifier: 
-  itemName: Medic Kit
-  attributesChange: 1
+  itemName: Sewing Kit
+  attributesChange: 4
   amountToChangeAttribute: 5
