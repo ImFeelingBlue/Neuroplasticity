@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Enemy
   - StairsSoundTrigger
+  - VisableWithLight
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - VisableWithLight
   - Water
   - UI
   - 
