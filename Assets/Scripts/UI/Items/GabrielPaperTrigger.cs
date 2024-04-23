@@ -26,38 +26,35 @@ public class GabrielPaperTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab))
+        if ((GabrielPaperPanel1.activeSelf || GabrielPaperPanel2.activeSelf || GabrielPaperPanel3.activeSelf || GabrielPaperPanel4.activeSelf || GabrielPaperPanel5.activeSelf) && Input.GetKeyDown(KeyCode.Tab))
         {
             tabCount++;
             Debug.Log(tabCount);
         }
         if (GabrielPaperPanel1.activeSelf && tabCount == 1)
         {
-            if (tabCount == 2)
-            {
-                GabrielPaperPanel1.SetActive(false);
-                GabrielPaperPanel2.SetActive(true);
-            }
-            else if (tabCount == 3)
-            {
-                GabrielPaperPanel2.SetActive(false);
-                GabrielPaperPanel3.SetActive(true);
-            }
-            else if (tabCount == 4)
-            {
-                GabrielPaperPanel3.SetActive(false);
-                GabrielPaperPanel4.SetActive(true);
-            }
-            else if (tabCount == 5)
-            {
-                GabrielPaperPanel4.SetActive(false);
-                GabrielPaperPanel5.SetActive(true);
-            }
-            else if (tabCount == 6)
-            {
-                GabrielPaperPanel5.SetActive(false);
-                lockIt = true;
-            }
+            GabrielPaperPanel1.SetActive(false);
+            GabrielPaperPanel2.SetActive(true);
+        }
+        else if (GabrielPaperPanel2.activeSelf && tabCount == 2)
+        {
+            GabrielPaperPanel2.SetActive(false);
+            GabrielPaperPanel3.SetActive(true);
+        }
+        else if (GabrielPaperPanel3.activeSelf && tabCount == 3)
+        {
+            GabrielPaperPanel3.SetActive(false);
+            GabrielPaperPanel4.SetActive(true);
+        }
+        else if (GabrielPaperPanel4.activeSelf && tabCount == 4)
+        {
+            GabrielPaperPanel4.SetActive(false);
+            GabrielPaperPanel5.SetActive(true);
+        }
+        else if (GabrielPaperPanel5.activeSelf && tabCount == 5)
+        {
+            GabrielPaperPanel5.SetActive(false);
+            lockIt = true;
         }
     }
 
