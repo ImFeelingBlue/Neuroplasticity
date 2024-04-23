@@ -36,7 +36,7 @@ public class FlashLight : MonoBehaviour
                 // Randomly change intensity during flicker duration
                 if (lightBool)
                 {
-                    lightSource.intensity = Random.Range(0.5f, 1f);
+                    lightSource.intensity = Random.Range(1.5f, 2f);
                 }
                 flickerDuration -= Time.deltaTime;
                 if (flickerDuration <= 0)
@@ -51,7 +51,7 @@ public class FlashLight : MonoBehaviour
 
     void FlashLightTimerSetter()
     {
-        flickerTimer = Random.Range(0f, 5f);
+        flickerTimer = Random.Range(0f, 2f);
         lightBool = true;
     }
 

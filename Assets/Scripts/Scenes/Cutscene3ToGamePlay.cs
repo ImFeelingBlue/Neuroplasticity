@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Cutscene3ToGamePlay : MonoBehaviour
 {
+    [SerializeField] GameObject Player;
     private int spaceCount = 0;
     // Update is called once per frame
     void Update()

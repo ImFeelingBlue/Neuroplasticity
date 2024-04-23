@@ -35325,7 +35325,7 @@ GameObject:
   - component: {fileID: 1923746594}
   - component: {fileID: 1923746597}
   - component: {fileID: 1923746596}
-  - component: {fileID: 1923746595}
+  - component: {fileID: 1923746598}
   m_Layer: 0
   m_Name: GamePlayToCutscene3
   m_TagString: Untagged
@@ -35348,19 +35348,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 143538676}
   m_LocalEulerAnglesHint: {x: 0, y: 84.53, z: 0}
---- !u!114 &1923746595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923746593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15f6788eba189e541bce2d1552c24a2f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 2032952598}
 --- !u!54 &1923746596
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -35409,6 +35396,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.9136078, y: 5, z: 3}
   m_Center: {x: 5.1687436, y: 0, z: -0.00000014286269}
+--- !u!114 &1923746598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923746593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8473b81e2ba2d9a47944a9dfd3d3451f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 2032952598}
 --- !u!1 &1924219941
 GameObject:
   m_ObjectHideFlags: 0
