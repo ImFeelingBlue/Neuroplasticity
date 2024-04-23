@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class cutscene1toGamePlay : MonoBehaviour
+public class Cutscene2ToGamePlay : MonoBehaviour
 {
     private int spaceCount = 0;
     // Update is called once per frame
@@ -18,7 +18,7 @@ public class cutscene1toGamePlay : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             spaceCount++;
-            if (spaceCount == 6)
+            if (spaceCount == 4)
             {
                 // Change to the scene with the name "YourSceneName"
                 SceneManager.LoadScene("TheGame");
