@@ -24,7 +24,10 @@ public class SwitchBetweenScreens : MonoBehaviour
     [SerializeField] private GameObject cameraMenu;
     [SerializeField] private GameObject cameraClicker;
 
-    public void Update()
+    [SerializeField] private AudioSource audioSourceMenuSwitch;
+    [SerializeField] private AudioClip switchSound;
+
+    void Update()
     {
         CheckMenuStatus(callMenu, callCliker);
         CheckMenuStatus(messagesMenu, messagesClicker);
@@ -41,6 +44,7 @@ public class SwitchBetweenScreens : MonoBehaviour
         {
             mainMenu.SetActive(false);
             menu.SetActive(true);
+            PlaySwitchSound();
         }
     }
 
@@ -52,12 +56,21 @@ public class SwitchBetweenScreens : MonoBehaviour
             bigPhone.SetActive(true);
             bigMenu.SetActive(true);
             phone.SetActive(false);
+            PlaySwitchSound();
 
             if (bigMenu == settingsMenu)
             {
                 Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true; 
+                Cursor.visible = true;
             }
+        }
+    }
+
+    private void PlaySwitchSound()
+    {
+        if (audioSourceMenuSwitch != null && switchSound != null)
+        {
+            audioSourceMenuSwitch.PlayOneShot(switchSound);
         }
     }
 }

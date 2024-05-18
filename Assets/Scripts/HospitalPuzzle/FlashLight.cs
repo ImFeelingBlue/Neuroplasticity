@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class FlashLight : MonoBehaviour
 {
+    [SerializeField] private AudioSource AudioSourceBuzz;
+    [SerializeField] private AudioSource AudioSourceClick;
+    [SerializeField] private AudioClip lightBuzz;
+    [SerializeField] private AudioClip lightOpenClick;
+    private bool lightBuzzingCheck = false;
+    private bool lightOpenClickCheck = false;
+
     [SerializeField] private Light lightSource;
     public bool isOn = false;
     private float flickerDuration; // Duration for flicker
@@ -20,6 +27,19 @@ public class FlashLight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isOn)
+        {
+            if (!lightOpenClickCheck)
+            {
+                AudioSourceClick.PlayOneShot(lightOpenClick);
+                lightOpenClickCheck = true;
+            }
+        }
+        else if (!isOn)
+        {
+            lightOpenClickCheck = false;
+        }
+
         // Toggle the flashlight on/off when the "F" key is pressed
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -36,13 +56,20 @@ public class FlashLight : MonoBehaviour
                 // Randomly change intensity during flicker duration
                 if (lightBool)
                 {
-                    lightSource.intensity = Random.Range(1.5f, 2f);
+                    lightSource.intensity = Random.Range(0.5f, 1.5f);
+                    if (!lightBuzzingCheck)
+                    {
+                        AudioSourceBuzz.PlayOneShot(lightBuzz);
+                        lightBuzzingCheck = true;
+                    }
                 }
                 flickerDuration -= Time.deltaTime;
                 if (flickerDuration <= 0)
                 {
                     lightSource.intensity = 3f;
+                    lightBuzzingCheck = false;
                     lightBool = false;
+                    AudioSourceBuzz.Stop();
                     Invoke("FlashLightTimerSetter", 2.5f);
                 }
             }
@@ -64,7 +91,7 @@ public class FlashLight : MonoBehaviour
         // Reset intensity when turning the light off
         if (!isOn)
         {
-            lightSource.intensity = 1f;
+            lightSource.intensity = 3f;
         }
     }
 }

@@ -18,6 +18,12 @@ public class CallText : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject CallMenu;
 
+    [SerializeField] AudioSource AudioSourceCallEnter;
+    [SerializeField] AudioClip CallSound;
+    [SerializeField] AudioClip NumberNotFoundSound;
+
+    private bool numberDoesNotExistCheck = false;
+
     public CallSellection callSellection;
 
     private bool isInputFieldFocused = false;
@@ -29,6 +35,16 @@ public class CallText : MonoBehaviour
         // Pass valid characters to CheckForInputFieldFocus
         CheckForInputFieldFocus("0123456789#*");
         CallToMainMenu();
+
+        if (AudioSourceCallEnter != null && CallSound != null && callButtonClicker != null && callButtonClicker.activeSelf && (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return)) && !numberDoesNotExistCheck)
+        {
+            AudioSourceCallEnter.PlayOneShot(CallSound);
+        }
+        else if (AudioSourceCallEnter != null && CallSound != null && callButtonClicker != null && callButtonClicker.activeSelf && (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return)) && numberDoesNotExistCheck)
+        {
+            AudioSourceCallEnter.PlayOneShot(NumberNotFoundSound);
+            numberDoesNotExistCheck = false;
+        }
     }
 
     private void CheckForInputFieldFocus(string validCharacters)
@@ -89,6 +105,7 @@ public class CallText : MonoBehaviour
             else if (result == 2)
             {
                 Debug.Log("Open 'this number does not exist' screen");
+                numberDoesNotExistCheck = true;
             }
         }
     }

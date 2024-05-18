@@ -10,8 +10,11 @@ public class AudioManagerScript : MonoBehaviour
     [SerializeField] private AudioClip footstep_wood_1;
     [SerializeField] private AudioClip footstep_wood_2;
     [SerializeField] private AudioClip squeakladder;
+    [SerializeField] private AudioClip backGroundSound;
 
-    [SerializeField] private AudioSource audioManagerAudioSource;
+    [SerializeField] private AudioSource mainAudioSource;
+    [SerializeField] private AudioSource audioSourceWalking;
+    [SerializeField] private AudioSource audioSourceBackGroundSound;
     [SerializeField] private GameObject sewingItem;
 
     [SerializeField] List<GameObject> boxItemList;
@@ -23,9 +26,17 @@ public class AudioManagerScript : MonoBehaviour
     private bool soundPlayedWalking = false;
     private bool playWood1 = true;
     private bool soundPlayingSewing = false;
+    private bool backGroundSoundPlaying = true;
 
     void Update()
     {
+        if (backGroundSoundPlaying)
+        {
+            audioSourceBackGroundSound.PlayOneShot(backGroundSound);
+            backGroundSoundPlaying = false;
+            StartCoroutine(LoopBackGroundSound());
+        }
+
         // Walking sound toggler
         if (cameraMovement != null && cameraMovement.IsWalking() && !soundPlayedWalking)
         {
@@ -33,11 +44,11 @@ public class AudioManagerScript : MonoBehaviour
 
             if (playWood1)
             {
-                audioManagerAudioSource.PlayOneShot(footstep_wood_1);
+                audioSourceWalking.PlayOneShot(footstep_wood_1);
             }
             else
             {
-                audioManagerAudioSource.PlayOneShot(footstep_wood_2);
+                audioSourceWalking.PlayOneShot(footstep_wood_2);
             }
 
             playWood1 = !playWood1;
@@ -46,7 +57,7 @@ public class AudioManagerScript : MonoBehaviour
 
         if (stairsSoundTrigger.stairsSoundIsTriggered)
         {
-            audioManagerAudioSource.PlayOneShot(squeakladder);
+            mainAudioSource.PlayOneShot(squeakladder);
             stairsSoundTrigger.stairsSoundIsTriggered = false;
         }
 
@@ -58,7 +69,7 @@ public class AudioManagerScript : MonoBehaviour
             {
                 if (!soundPlayed)
                 {
-                    audioManagerAudioSource.PlayOneShot(footStepMudAudioClip);
+                    mainAudioSource.PlayOneShot(footStepMudAudioClip);
                     StartCoroutine(DelayedResetSound());
                 }
 
@@ -76,7 +87,7 @@ public class AudioManagerScript : MonoBehaviour
         {
             if (!soundPlayingSewing)
             {
-                audioManagerAudioSource.PlayOneShot(sewingItemPickUpAudioClip);
+                mainAudioSource.PlayOneShot(sewingItemPickUpAudioClip);
                 soundPlayingSewing = true;
             }
         }
@@ -87,6 +98,11 @@ public class AudioManagerScript : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f); // Adjust the delay as needed
         soundPlayedWalking = false;
+    }
+    IEnumerator LoopBackGroundSound()
+    {
+        yield return new WaitForSeconds(3f); // Adjust the delay as needed
+        backGroundSoundPlaying = true;
     }
 
     IEnumerator DelayedResetSound()
