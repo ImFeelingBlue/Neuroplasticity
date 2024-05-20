@@ -367,7 +367,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000029564, y: -6}
-  m_SizeDelta: {x: 650, y: 668.1753}
+  m_SizeDelta: {x: 680, y: 668.1753}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &12784238
 MonoBehaviour:
@@ -401,8 +401,8 @@ MonoBehaviour:
     He had a knife now, and he hurt himself. I didn't understand why he was doing
     it. It was like a nightmare I couldn't wake up from.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
-  m_sharedMaterial: {fileID: -286800938589692872, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
+  m_sharedMaterial: {fileID: 8260261006532760982, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -426,8 +426,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12454,7 +12454,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.6444, y: 47}
-  m_SizeDelta: {x: 650, y: 640.2119}
+  m_SizeDelta: {x: 680, y: 640.2119}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590743561
 MonoBehaviour:
@@ -12488,8 +12488,8 @@ MonoBehaviour:
     be mean again. I don't want to go back to the basement. I just want things to
     be okay.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
-  m_sharedMaterial: {fileID: -286800938589692872, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
+  m_sharedMaterial: {fileID: 8260261006532760982, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -12513,8 +12513,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -13077,8 +13077,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.6398, y: 153}
-  m_SizeDelta: {x: 689.1, y: 492.9029}
+  m_AnchoredPosition: {x: 2.6398, y: 129}
+  m_SizeDelta: {x: 680, y: 492.9029}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &614583605
 MonoBehaviour:
@@ -13122,8 +13122,8 @@ MonoBehaviour:
     thought of him being alone, but I can\u2019t stay. The despair is too much. I
     pray that he finds peace, that the curse ends with me."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
-  m_sharedMaterial: {fileID: -286800938589692872, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
+  m_sharedMaterial: {fileID: 8260261006532760982, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13147,8 +13147,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -23141,7 +23141,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000029564, y: 28}
-  m_SizeDelta: {x: 650, y: 685.61}
+  m_SizeDelta: {x: 680, y: 685.61}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &990487790
 MonoBehaviour:
@@ -23176,8 +23176,8 @@ MonoBehaviour:
     like they belonged to someone else. It was like a bad dream that I couldn't wake
     up from.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
-  m_sharedMaterial: {fileID: -286800938589692872, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
+  m_sharedMaterial: {fileID: 8260261006532760982, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -23201,8 +23201,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -25299,7 +25299,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.6398, y: -2}
-  m_SizeDelta: {x: 650, y: 712.123}
+  m_SizeDelta: {x: 680, y: 712.123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1090235976
 MonoBehaviour:
@@ -25332,8 +25332,8 @@ MonoBehaviour:
     and that you can overcome any challenge. Stay strong, my son. \r\n\r\n\r\nWith
     love, \r\nYour father"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
-  m_sharedMaterial: {fileID: -286800938589692872, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
+  m_sharedMaterial: {fileID: 8260261006532760982, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -25357,8 +25357,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 32
-  m_fontSizeBase: 32
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -27838,7 +27838,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000029564, y: 6}
-  m_SizeDelta: {x: 650, y: 668.1753}
+  m_SizeDelta: {x: 680, y: 668.1753}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1208874431
 MonoBehaviour:
@@ -27871,8 +27871,8 @@ MonoBehaviour:
     like nobody wanted to be near me anymore. I didn't know what I did wrong, but
     it seemed like everyone thought I was cursed.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
-  m_sharedMaterial: {fileID: -286800938589692872, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
+  m_sharedMaterial: {fileID: 8260261006532760982, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -27896,8 +27896,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -31508,7 +31508,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.6398, y: -32}
-  m_SizeDelta: {x: 650, y: 712.123}
+  m_SizeDelta: {x: 680, y: 712.123}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1400688506
 MonoBehaviour:
@@ -31541,8 +31541,8 @@ MonoBehaviour:
     the eye knows, and with each day, I lose a piece of myself to its unyielding
     gaze."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
-  m_sharedMaterial: {fileID: -286800938589692872, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
+  m_sharedMaterial: {fileID: 8260261006532760982, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -31566,8 +31566,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -37220,7 +37220,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 2.6445, y: 40}
-  m_SizeDelta: {x: 650, y: 640.2119}
+  m_SizeDelta: {x: 680, y: 640.2119}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1656938078
 MonoBehaviour:
@@ -37256,8 +37256,8 @@ MonoBehaviour:
     couldn't shake the feeling that something was amiss, especially in the way we
     regarded Gabriel.\r\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
-  m_sharedMaterial: {fileID: -286800938589692872, guid: 69c869ce3d9b16c46ae6d49d244e0d94, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
+  m_sharedMaterial: {fileID: 8260261006532760982, guid: c5994e0efab57c5469185e56d151e0b9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -37281,8 +37281,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
