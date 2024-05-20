@@ -32,8 +32,8 @@ public class AudioManagerScript : MonoBehaviour
     {
         if (backGroundSoundPlaying)
         {
-            audioSourceBackGroundSound.PlayOneShot(backGroundSound);
             backGroundSoundPlaying = false;
+            audioSourceBackGroundSound.PlayOneShot(backGroundSound);
             StartCoroutine(LoopBackGroundSound());
         }
 

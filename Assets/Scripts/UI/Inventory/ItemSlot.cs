@@ -13,6 +13,7 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
     Color boxColor = new Color(84f / 255f, 0f / 255f, 18f / 255f, 1f);
     Color cameraColor = new Color(0f, 112f / 255f, 192f / 255f, 1f);
     Color sewingKitColor = new Color(195f / 255f, 195f / 255f, 0f / 255f, 1f);
+    Color pipeColor = new Color(50f / 255f, 50f / 255f, 50f / 255f, 1f);
     Color emptySlotColor = new Color(101f / 255f, 101f / 255f, 101f / 255f, 1f);
 
     // Static variable to track if a mouse left click occurred
@@ -97,6 +98,21 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
             itemImage.color = sewingKitColor;
             itemImage.enabled = true;
         }
+        else if (itemName == "Pipe1")
+        {
+            itemImage.color = pipeColor;
+            itemImage.enabled = true;
+        }
+        else if (itemName == "Pipe2")
+        {
+            itemImage.color = pipeColor;
+            itemImage.enabled = true;
+        }
+        else if (itemName == "Pipe3")
+        {
+            itemImage.color = pipeColor;
+            itemImage.enabled = true;
+        }
 
         // Return zero to indicate that all items were added successfully
         return 0;
@@ -168,13 +184,29 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
                 itemDescriptionImage.color = sewingKitColor;
                 itemDescriptionImage.enabled = true;
             }
+            else if (itemName == "Pipe1")
+            {
+                itemDescriptionImage.color = pipeColor;
+                itemDescriptionImage.enabled = true;
+            }
+            else if (itemName == "Pipe2")
+            {
+                itemDescriptionImage.color = pipeColor;
+                itemDescriptionImage.enabled = true;
+            }
+            else if (itemName == "Pipe3")
+            {
+                itemDescriptionImage.color = pipeColor;
+                itemDescriptionImage.enabled = true;
+            }
             else if (itemName == "")
             {
                 itemDescriptionImage.color = emptySlotColor;
                 itemDescriptionImage.enabled = true;
             }
+
         }
-        
+
     }
 
     private void EmptySlot()
