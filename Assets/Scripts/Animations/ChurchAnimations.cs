@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class ChurchAnimations : MonoBehaviour
 {
-    [SerializeField] GameObject Player;
+    [SerializeField] private Animator animatorCross;
+    [SerializeField] private Animator animatorLever;
+    [SerializeField] private GameObject bloodSplashPanel;
+    [SerializeField] private GameObject Player;
     [SerializeField] private GameObject intactBody;
 
     [SerializeField] private GameObject Corpse1;
@@ -20,8 +23,7 @@ public class ChurchAnimations : MonoBehaviour
     [SerializeField] private GameObject Corpse10;
     [SerializeField] private GameObject Corpse11;
 
-    private bool leverAnimation = false;
-    private bool crossDestruction = false;
+    private bool isPlayerInTrigger = false;
 
     // Start is called before the first frame update
     void Start()
@@ -41,21 +43,64 @@ public class ChurchAnimations : MonoBehaviour
             Corpse9.SetActive(false);
             Corpse10.SetActive(false);
             Corpse11.SetActive(false);
+
+            bloodSplashPanel.SetActive(false);
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.E))
+        {
+            StartCoroutine(ActivateCross());
+            animatorLever.SetBool("LeverPull", true);
+            intactBody.SetActive(false);
+        }
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == Player && Input.GetKeyDown(KeyCode.E))
+        if (other.gameObject == Player)
         {
-            leverAnimation = true;
-            crossDestruction = true;
+            isPlayerInTrigger = true;
         }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == Player)
+        {
+            isPlayerInTrigger = false;
+        }
+    }
+    IEnumerator ClearBlood()
+    {
+        yield return new WaitForSeconds(7);
+        bloodSplashPanel.SetActive(false);
+    }
+
+    IEnumerator ActivateCross()
+    {
+        yield return new WaitForSeconds(6);
+        animatorCross.SetBool("LeverDown", true);
+        StartCoroutine(BodyParts());
+        StartCoroutine(ClearBlood());
+    }
+    IEnumerator BodyParts()
+    {
+        yield return new WaitForSeconds(1.3f);
+        bloodSplashPanel.SetActive(true);
+        Corpse1.SetActive(true);
+        Corpse2.SetActive(true);
+        Corpse3.SetActive(true);
+        Corpse4.SetActive(true);
+        Corpse5.SetActive(true);
+        Corpse6.SetActive(true);
+        Corpse7.SetActive(true);
+        Corpse8.SetActive(true);
+        Corpse9.SetActive(true);
+        Corpse10.SetActive(true);
+        Corpse11.SetActive(true);
     }
 }

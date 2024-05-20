@@ -6,6 +6,8 @@ public class Pipe3SetupTrigger : MonoBehaviour
 {
     [SerializeField] GameObject Player;
     [SerializeField] GameObject pipe3;
+    public Pipe3Pickup pipe3Pickup;
+    public bool pipe3GotSetup = false;
 
     private bool isPlayerInTrigger = false;
 
@@ -32,9 +34,10 @@ public class Pipe3SetupTrigger : MonoBehaviour
 
     private void Update()
     {
-        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.E))
+        if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.E) && pipe3Pickup.pipe3GotPickedTrigger)
         {
             pipe3.SetActive(true);
+            pipe3GotSetup = true;
         }
     }
 }
