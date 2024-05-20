@@ -18561,10 +18561,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1148052022}
   - {fileID: 692852459}
   - {fileID: 2127219215}
   - {fileID: 2013630147}
+  - {fileID: 1671831235}
+  - {fileID: 1148052022}
   - {fileID: 656002918}
   - {fileID: 547683141}
   - {fileID: 205549628}
@@ -18576,7 +18577,6 @@ RectTransform:
   - {fileID: 1934247538}
   - {fileID: 33049099}
   - {fileID: 950174070}
-  - {fileID: 1671831235}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -42926,10 +42926,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2003558780}
-  - component: {fileID: 2003558782}
   - component: {fileID: 2003558781}
   m_Layer: 0
-  m_Name: GameplayToCutscene5
+  m_Name: GameplayToEndCutscene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42971,19 +42970,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.7126617, y: 5, z: 5}
   m_Center: {x: -0.35633072, y: 0, z: -0.0000000036714112}
---- !u!114 &2003558782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003558779}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e696a9dcde979c4da1d6e88a6ffbcac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 2032952598}
 --- !u!1 &2004288437
 GameObject:
   m_ObjectHideFlags: 0

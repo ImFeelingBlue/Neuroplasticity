@@ -14,6 +14,10 @@ public class EnableTheCutscene3Trigger : MonoBehaviour
         {
             cutscene3Trigger.SetActive(false);
         }
+        else  
+        {
+            Debug.Log("null amk");
+        }
     }
 
     void OnTriggerEnter(Collider other)
