@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class Cutscene3ToGamePlay : MonoBehaviour
 {
-    [SerializeField] GameObject Player;
     private int spaceCount = 0;
     // Update is called once per frame
     void Update()
@@ -22,7 +21,7 @@ public class Cutscene3ToGamePlay : MonoBehaviour
             if (spaceCount == 3)
             {
                 // Change to the scene with the name "YourSceneName"
-                SceneManager.LoadScene("TheGame");
+                SceneManager.LoadScene("TheGame 3");
             }
         }
     }
