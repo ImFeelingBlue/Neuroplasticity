@@ -7,6 +7,7 @@ public class SewingKitPaperTrigger : MonoBehaviour
 {
     [SerializeField] GameObject Player;
     [SerializeField] GameObject SewingKitPaperPanel;
+    [SerializeField] GameObject gabrielHouseDoorCube;
     private bool lockIt;
 
     private void Start()
@@ -29,6 +30,7 @@ public class SewingKitPaperTrigger : MonoBehaviour
         if (other.gameObject == Player && !lockIt)
         {
             SewingKitPaperPanel.SetActive(true);
+            Destroy(gabrielHouseDoorCube);
         }
     }
 }

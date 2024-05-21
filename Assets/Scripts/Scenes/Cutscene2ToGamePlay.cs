@@ -21,7 +21,7 @@ public class Cutscene2ToGamePlay : MonoBehaviour
             if (spaceCount == 4)
             {
                 // Change to the scene with the name "YourSceneName"
-                SceneManager.LoadScene("TheGame");
+                SceneManager.LoadScene("TheGame 2");
             }
         }
     }

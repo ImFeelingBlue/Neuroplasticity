@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2969135141455524323
+--- !u!1 &2144906654817303414
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,49 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6818924702472628112}
-  - component: {fileID: 819560654460311667}
-  - component: {fileID: 7166114554654090273}
-  - component: {fileID: 3967910093192639077}
-  - component: {fileID: 1107745971314996273}
-  - component: {fileID: 5994973805675456493}
+  - component: {fileID: 7591926879851533179}
+  - component: {fileID: 4493374006950935916}
+  - component: {fileID: 85474946539512279}
+  - component: {fileID: 3623292424112700859}
+  - component: {fileID: 251236110495861953}
+  - component: {fileID: 6926993324458905607}
   m_Layer: 0
-  m_Name: CameraItem
+  m_Name: Pipe1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6818924702472628112
+--- !u!4 &7591926879851533179
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2969135141455524323}
+  m_GameObject: {fileID: 2144906654817303414}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -227.13, y: 0.61, z: -8.64}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
+  m_LocalPosition: {x: -321.32974, y: 0.25878334, z: -156.797}
+  m_LocalScale: {x: 390.40323, y: 390.40323, z: 390.40323}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &819560654460311667
+--- !u!33 &4493374006950935916
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2969135141455524323}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &7166114554654090273
+  m_GameObject: {fileID: 2144906654817303414}
+  m_Mesh: {fileID: -2120102806405025869, guid: 59cf44dfa2934d34fa1aca0f7092452d, type: 3}
+--- !u!23 &85474946539512279
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2969135141455524323}
+  m_GameObject: {fileID: 2144906654817303414}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e0f3cb14e411de64fa8a60c3a257ea86, type: 2}
+  - {fileID: 7498461928983958705, guid: 59cf44dfa2934d34fa1aca0f7092452d, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -86,13 +86,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &3967910093192639077
-SphereCollider:
+--- !u!65 &3623292424112700859
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2969135141455524323}
+  m_GameObject: {fileID: 2144906654817303414}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -101,40 +101,34 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1107745971314996273
+  m_Size: {x: 0.0046777725, y: 0.0011997796, z: 0.005515165}
+  m_Center: {x: 0.00067676307, y: -0.000000019586878, z: 0.0009307766}
+--- !u!114 &251236110495861953
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2969135141455524323}
+  m_GameObject: {fileID: 2144906654817303414}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2a89db837bba6f46aafa7a928f7080f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Camera
-  quantity: 2
-  itemDescription: 'This is a camera, it takes pictures.
-
-
-    Effect on consumption:
-
-    Detection
-    +1'
---- !u!54 &5994973805675456493
+  itemName: Pipe
+  quantity: 1
+  itemDescription: You should fiind where this one fits.
+--- !u!54 &6926993324458905607
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2969135141455524323}
+  m_GameObject: {fileID: 2144906654817303414}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
@@ -150,7 +144,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
