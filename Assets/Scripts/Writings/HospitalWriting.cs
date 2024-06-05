@@ -18,14 +18,14 @@ public class HospitalWriting : MonoBehaviour
         if (other.gameObject == Player && !lockIt)
         {
             HospitalWritingOnTheWall.SetActive(true);
-            StartCoroutine(TurnItInvisable());
+            //StartCoroutine(TurnItInvisable());
         }
     }
 
-    private IEnumerator TurnItInvisable()
-    {
-        yield return new WaitForSeconds(3f);
-        HospitalWritingOnTheWall.SetActive(false);
-        lockIt = true;
-    }
+    //private IEnumerator TurnItInvisable()
+    //{
+        //yield return new WaitForSeconds(3f);
+        //HospitalWritingOnTheWall.SetActive(false);
+        //lockIt = true;
+    //}
 }

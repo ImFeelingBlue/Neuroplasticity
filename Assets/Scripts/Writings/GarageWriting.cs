@@ -18,14 +18,14 @@ public class GarageWriting : MonoBehaviour
         if (other.gameObject == Player && !lockIt)
         {
             GarageWritingOnTheWall.SetActive(true);
-            StartCoroutine(TurnItInvisable());
+            //StartCoroutine(TurnItInvisable());
         }
     }
 
-    private IEnumerator TurnItInvisable()
-    {
-        yield return new WaitForSeconds(3f);
-        GarageWritingOnTheWall.SetActive(false);
-        lockIt = true;
-    }
+    //private IEnumerator TurnItInvisable()
+    //{
+      //  yield return new WaitForSeconds(3f);
+        //GarageWritingOnTheWall.SetActive(false);
+        //lockIt = true;
+    //}
 }
