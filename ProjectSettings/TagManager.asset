@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - StairsSoundTrigger
   - VisableWithLight
+  - VisableWithLight2D
   layers:
   - Default
   - TransparentFX

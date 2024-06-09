@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TurnObjectsVisibaleWithLight : MonoBehaviour
 {
+    //Hospital Part
     [SerializeField] private LayerMask targetLayer;
     [SerializeField] private float raycastDistance = 15f;
     private const string VisibleWithTag = "VisableWithLight"; // Tag for the objects that should become visible

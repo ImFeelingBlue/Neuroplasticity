@@ -13,7 +13,6 @@ public class PictureCapturing : MonoBehaviour
     [SerializeField] TextMeshProUGUI capturedImageCountText; // Use TextMeshProUGUI for Text element
     [SerializeField] int maxImages = 9; // Maximum number of images that can be captured
     [SerializeField] Transform imageContainer; // Parent transform for UI Image elements
-
     private int capturedImageCount = 0; // Number of images captured
 
     public void Update()
@@ -25,7 +24,6 @@ public class PictureCapturing : MonoBehaviour
     {
         if (cameraMenu != null && cameraMenu.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("Click");
             if (capturedImageCount < maxImages)
             {
                 // Capture the current camera view as a screenshot
@@ -122,7 +120,6 @@ public class PictureCapturing : MonoBehaviour
 
         // Write the image bytes to the file
         File.WriteAllBytes(filePath, bytes);
-        Debug.Log("Image saved as: " + filePath);
     }
 
     private void DisplayImage(Texture2D image, float xPosition, float yPosition)
