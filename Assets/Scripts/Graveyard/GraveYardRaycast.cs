@@ -13,10 +13,12 @@ public class GraveYardRaycast : MonoBehaviour
     [SerializeField] GameObject symbol2;
     [SerializeField] GameObject symbol3;
     [SerializeField] GameObject eyeBalls;
+    private bool lockingThisForever = false;
 
     public SymbolPhotoTrigger SymbolPhotoTrigger;
     public PictureCapturing pictureCapturing;
     public EyeBallsTrigger EyeBallsTrigger;
+    public bool eyeBallsAreActive = false;
 
     [SerializeField] private bool works = false;
 
@@ -38,9 +40,11 @@ public class GraveYardRaycast : MonoBehaviour
             symbol2.SetActive(true);
             symbol3.SetActive(true);
         }
-        else if (hit.collider != null && hit.collider.CompareTag(targetTag) && EyeBallsTrigger.inTheEyeBallBox)
+        else if (hit.collider != null && hit.collider.CompareTag(targetTag) && EyeBallsTrigger.inTheEyeBallBox && !lockingThisForever)
         {
             eyeBalls.SetActive(true);
+            eyeBallsAreActive = true;
+            lockingThisForever = true;
         }
     }
 
