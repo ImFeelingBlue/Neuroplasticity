@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class GamePlayToCutSceneCrowShovel : MonoBehaviour, IPointerClickHandler
+public class GamePlayToCutsceneCrowEyeBalls : MonoBehaviour, IPointerClickHandler
 {
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -13,8 +13,9 @@ public class GamePlayToCutSceneCrowShovel : MonoBehaviour, IPointerClickHandler
             ChangeTheScene();
         }
     }
+
     void ChangeTheScene()
     {
-        SceneManager.LoadScene("CutSceneCrow1");
+        SceneManager.LoadScene("CutSceneCrow2");
     }
 }

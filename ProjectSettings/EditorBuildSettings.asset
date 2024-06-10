@@ -35,4 +35,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TheGame 5.unity
     guid: 20daa606f602022418915bc2d97b6134
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/CutSceneCrow1.unity
+    guid: f619bf006d888d645a03e4909168d533
+  - enabled: 1
+    path: Assets/Scenes/CutScenes/CutSceneCrow2.unity
+    guid: 78c7c38691e4c794cb3b4eaa1bf4e862
   m_configObjects: {}
