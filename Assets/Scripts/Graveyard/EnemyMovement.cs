@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class EnemyMovement : MonoBehaviour
 {
     public Transform player; // Reference to the player’s transform
-    public float speed = 1f; // Movement speed
+    public float speed = 2f; // Movement speed
 
     void Update()
     {
