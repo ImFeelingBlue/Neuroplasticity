@@ -35730,7 +35730,7 @@ MonoBehaviour:
   footstep_wood_1: {fileID: 8300000, guid: 2476e4e6404575b4faf7582b33afee02, type: 3}
   footstep_wood_2: {fileID: 8300000, guid: 73d857c3e6405dd418ffab8241a2b765, type: 3}
   squeakladder: {fileID: 8300000, guid: c5f7b2aae07f3c14c891ad5aaf4da35d, type: 3}
-  backGroundSound: {fileID: 8300000, guid: e6887091dddfab74ab8d770fcf7cc5f7, type: 3}
+  backGroundSound: {fileID: 8300000, guid: f856c1549752c2742ae1a74a5cbcda5f, type: 3}
   mainAudioSource: {fileID: 1413437292}
   audioSourceWalking: {fileID: 1413437293}
   audioSourceBackGroundSound: {fileID: 1413437294}
@@ -35949,7 +35949,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0

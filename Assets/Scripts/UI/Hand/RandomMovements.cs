@@ -26,7 +26,7 @@ public class RandomMovements : MonoBehaviour
     private bool randomEnemyDetectionCheck = false;
     int randomSeeEnemy;
     public int DetectionSkill = 0;
-    int detectionChance = 10;
+    int detectionChance = 0;
     bool skillPointGiven = false;
 
     // Eye movement variables
