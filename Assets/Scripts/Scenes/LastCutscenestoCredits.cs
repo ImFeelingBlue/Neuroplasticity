@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CutSceneBadToCutSceneLastLair : MonoBehaviour
+public class LastCutscenestoCredits : MonoBehaviour
 {
     private int spaceCount = 0;
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class CutSceneBadToCutSceneLastLair : MonoBehaviour
             if (spaceCount == 2)
             {
                 // Change to the scene with the name "YourSceneName"
-                SceneManager.LoadScene("offer lair");
+                SceneManager.LoadScene("endcredits");
             }
         }
     }
