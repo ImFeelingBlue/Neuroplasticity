@@ -28,8 +28,8 @@ RectTransform:
   m_GameObject: {fileID: 2649063302409389909}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8265059353765040698}
   - {fileID: 3751976282462323870}
@@ -98,11 +98,17 @@ MonoBehaviour:
   maxNumberOfItems: 10
   quantityText: {fileID: 1118761860413820241}
   itemImage: {fileID: 5860729111716560851}
-  itemDescriptionImage: {fileID: 0}
-  ItemDescriptionNameText: {fileID: 0}
-  ItemDescriptionText: {fileID: 0}
   selectedShader: {fileID: 9035427759328776637}
   thisItemSelected: 0
+  boxSprite: {fileID: 0}
+  cameraSprite: {fileID: 0}
+  sewingKitSprite: {fileID: 21300000, guid: cadc695da38a5b942a7af74fa56ec24c, type: 3}
+  pipeSprite: {fileID: 21300000, guid: 3130d0b4c42fc6c459556225b39c20d6, type: 3}
+  syringSprite: {fileID: 21300000, guid: 4abeaa0955b8d854fb7abf93df7bf6b8, type: 3}
+  shovelSprite: {fileID: 21300000, guid: d01a4fdf7fbab2e4b8906b3fa80b6940, type: 3}
+  eyeBallsSprite: {fileID: 21300000, guid: eab966f4d75675149baee3cee49db6c1, type: 3}
+  corpseHeartSprite: {fileID: 21300000, guid: ea3fee1f70bd4284fade9f3172c55046, type: 3}
+  emptySlotSprite: {fileID: 0}
 --- !u!1 &7479929159797283559
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +346,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3227249086483933752}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

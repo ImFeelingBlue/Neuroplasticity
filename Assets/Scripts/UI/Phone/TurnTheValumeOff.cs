@@ -31,7 +31,7 @@ public class TurnTheValumeOff : MonoBehaviour, IPointerClickHandler
     {
         if (audioStatusText != null)
         {
-            audioStatusText.text = isMuted ? "The volume is: off" : "The volume is: on";
+            audioStatusText.text = isMuted ? "Volume: Off" : "Volume: On";
         }
     }
 }
