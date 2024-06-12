@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,12 +9,16 @@ using UnityEngine.UIElements;
 
 public class PictureCapturing : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip pictureCaptureSound;
     [SerializeField] Camera mainCamera; // Reference to the main game camera
     [SerializeField] GameObject cameraMenu; // UI element representing the camera menu
     [SerializeField] TextMeshProUGUI capturedImageCountText; // Use TextMeshProUGUI for Text element
     [SerializeField] int maxImages = 9; // Maximum number of images that can be captured
     [SerializeField] Transform imageContainer; // Parent transform for UI Image elements
     private int capturedImageCount = 0; // Number of images captured
+    private bool cameraSoundLock = false;
+    private bool cameraSoundLock2 = false;
 
     public void Update()
     {
@@ -24,6 +29,13 @@ public class PictureCapturing : MonoBehaviour
     {
         if (cameraMenu != null && cameraMenu.activeSelf && Input.GetKeyDown(KeyCode.E))
         {
+            if (!cameraSoundLock && !cameraSoundLock2)
+            {
+                audioSource.PlayOneShot(pictureCaptureSound);
+                cameraSoundLock = true;
+                StartCoroutine(ToggleCameraSoundlock());
+            }
+
             if (capturedImageCount < maxImages)
             {
                 // Capture the current camera view as a screenshot
@@ -74,6 +86,7 @@ public class PictureCapturing : MonoBehaviour
                 else if (capturedImageCount == 9)
                 {
                     DisplayImage(screenshot, 76.6f, -69.7f);
+                    cameraSoundLock2 = true;
                 }
             }
             else
@@ -147,5 +160,11 @@ public class PictureCapturing : MonoBehaviour
 
         // Set the position of the RawImage element on the screen
         rectTransform.anchoredPosition = new Vector2(xPosition, yPosition);
+    }
+
+    IEnumerator ToggleCameraSoundlock()
+    {
+        yield return null;
+        cameraSoundLock = false;
     }
 }

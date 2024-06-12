@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class ChurchAnimations : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip LeverSound;
+
     [SerializeField] private Animator animatorCross;
     [SerializeField] private Animator animatorLever;
     [SerializeField] private GameObject bloodSplashPanel;
@@ -24,6 +27,7 @@ public class ChurchAnimations : MonoBehaviour
     [SerializeField] private GameObject Corpse11;
 
     private bool isPlayerInTrigger = false;
+    private bool leverSoundLock = false;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +57,11 @@ public class ChurchAnimations : MonoBehaviour
     {
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.E))
         {
+            if (!leverSoundLock)
+            {
+                audioSource.PlayOneShot(LeverSound);
+                leverSoundLock = true;
+            }
             StartCoroutine(ActivateCross());
             animatorLever.SetBool("LeverPull", true);
             intactBody.SetActive(false);

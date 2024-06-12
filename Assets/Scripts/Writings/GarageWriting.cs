@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GarageWriting : MonoBehaviour
 {
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip textSound;
     [SerializeField] GameObject Player;
     [SerializeField] GameObject GarageWritingOnTheWall;
     private bool lockIt = false;
@@ -18,6 +20,8 @@ public class GarageWriting : MonoBehaviour
         if (other.gameObject == Player && !lockIt)
         {
             GarageWritingOnTheWall.SetActive(true);
+            audioSource.PlayOneShot(textSound);
+            lockIt = true;
             //StartCoroutine(TurnItInvisable());
         }
     }
