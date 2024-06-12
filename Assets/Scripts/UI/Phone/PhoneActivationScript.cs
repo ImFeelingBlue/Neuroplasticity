@@ -76,7 +76,7 @@ public class PhoneActivationScript : MonoBehaviour
 
     private void SetPhoneAnimation()
     {
-        if (Input.GetKeyDown(KeyCode.E) && phoneCount == 0 && !dontOpen)
+        if (Input.GetKeyDown(KeyCode.C) && phoneCount == 0 && !dontOpen)
         {
             animator.SetBool("isPhone", true);
             phoneCount = 1;
@@ -86,7 +86,7 @@ public class PhoneActivationScript : MonoBehaviour
             }
             panelCounterCoroutine = StartCoroutine(InformationPanelCounter());
         }
-        else if (Input.GetKeyDown(KeyCode.E) && phoneCount == 1 && !dontOpen)
+        else if (Input.GetKeyDown(KeyCode.C) && phoneCount == 1 && !dontOpen)
         {
             animator.SetBool("isPhone", false);
             phoneButtonInformationCounter = 10;

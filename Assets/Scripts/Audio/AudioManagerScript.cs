@@ -16,6 +16,7 @@ public class AudioManagerScript : MonoBehaviour
     [SerializeField] private AudioSource audioSourceWalking;
     [SerializeField] private AudioSource audioSourceBackGroundSound;
     [SerializeField] private GameObject sewingItem;
+    public SewingKitSoundTrigger sewingKitSoundTrigger;
 
     [SerializeField] List<GameObject> boxItemList;
 
@@ -25,8 +26,8 @@ public class AudioManagerScript : MonoBehaviour
     private bool soundPlayed = false;
     private bool soundPlayedWalking = false;
     private bool playWood1 = true;
-    private bool soundPlayingSewing = false;
     private bool backGroundSoundPlaying = true;
+    private bool sewingItemSoundLock = false;
 
     void Update()
     {
@@ -83,12 +84,12 @@ public class AudioManagerScript : MonoBehaviour
         }
 
         // Sewing item 
-        if (sewingItem == null)
+        if (sewingItem != null)
         {
-            if (!soundPlayingSewing)
+            if (!sewingItemSoundLock && sewingKitSoundTrigger.hasCollided)
             {
+                sewingItemSoundLock = true;
                 mainAudioSource.PlayOneShot(sewingItemPickUpAudioClip);
-                soundPlayingSewing = true;
             }
         }
 

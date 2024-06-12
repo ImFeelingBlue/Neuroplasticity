@@ -19,8 +19,10 @@ public class GraveYardRaycast : MonoBehaviour
     public PictureCapturing pictureCapturing;
     public EyeBallsTrigger EyeBallsTrigger;
     public bool eyeBallsAreActive = false;
+    private bool symbolPictureTaken = false;
 
     [SerializeField] private bool works = false;
+    
 
     private void Start()
     {
@@ -39,8 +41,9 @@ public class GraveYardRaycast : MonoBehaviour
         {
             symbol2.SetActive(true);
             symbol3.SetActive(true);
+            symbolPictureTaken = true;
         }
-        else if (hit.collider != null && hit.collider.CompareTag(targetTag) && EyeBallsTrigger.inTheEyeBallBox && !lockingThisForever)
+        else if (hit.collider != null && hit.collider.CompareTag(targetTag) && EyeBallsTrigger.inTheEyeBallBox && !lockingThisForever && symbolPictureTaken)
         {
             eyeBalls.SetActive(true);
             eyeBallsAreActive = true;
